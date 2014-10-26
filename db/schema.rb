@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141026154801) do
+ActiveRecord::Schema.define(version: 20141026201209) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,13 @@ ActiveRecord::Schema.define(version: 20141026154801) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "brainly_user_id"
+  end
+
+  create_table "cache_dbs", force: true do |t|
+    t.string   "key"
+    t.text     "value"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "language_versions", force: true do |t|

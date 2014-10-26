@@ -1,9 +1,10 @@
+load 'vendor/GoogleDriveDb.rb'
 namespace :users do
   desc "TODO"
   task load: :environment do
 
   	  	p 'test'
-		session = GoogleDrive.saved_session(nil, nil, Rails.application.config.client_id, Rails.application.config.client_secret)
+		session = GoogleDriveDb.saved_session(nil, nil, Rails.application.config.client_id, Rails.application.config.client_secret)
 		ws = session.spreadsheet_by_key(Rails.application.config.users_spreadsheet_key).worksheets[0]
 		used_names = []
 		for row in 2 .. ws.num_rows

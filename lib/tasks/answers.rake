@@ -165,7 +165,7 @@ namespace :answers do
   	end
   	sorted = ranking.sort_by { |k, v| [-v[buckets[0]][:answers], -v[buckets[1]][:answers], -v[buckets[2]][:answers] ]}
   	pp sorted
-  	File.open('db/sorted.yml', 'w') {|f| f.write(YAML.dump(sorted)) }
+    CacheDb.where(key: "sorted").first_or_create.update(value: YAML.dump(sorted))
   end
 
 end
