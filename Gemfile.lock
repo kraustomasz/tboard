@@ -93,6 +93,7 @@ GEM
       multi_xml (~> 0.5)
       rack (~> 1.2)
     paint (0.8.7)
+    pg (0.17.1)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -168,6 +169,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   nokogiri
+  pg
   rails (= 4.1.6)
   restclient
   retriable
