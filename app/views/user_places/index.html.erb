@@ -1,23 +1,32 @@
-<h1>Hello World!</h1>
-<div class="wrapper">-
+<div class="wrapper" id="wrapper">
+  <div class="all-header">
+    <img src="/logo.png" id='logo' /> answering leaderboard
+  </div>
   <div class="table">
-    
     <div class="row header">
+      <div class="cell">
+        #
+      </div>
       <div class="cell">
         Name
       </div>
       <div class="cell">
         Nick
       </div>
+      <% totals = {} %>
       <% @buckets.each do |bucket| %>
+      <% totals[bucket] = 0 %>
 	      <div class="cell">
-	        <%= bucket %>d
+	        <%= bucket %> days
 	      </div>
 	   <% end %>
     </div>
-
+    <% place = 1; %>
     <% @ranking.each do |user_id, ranking_elem| %>
-    <div class="row">
+    <div class="row" id="row-place-<%= place %>">
+      <div class="cell place">
+        <%= place %>.
+      </div>
       <div class="cell">
        	<%= @users[user_id].name %>
       </div>
@@ -25,12 +34,36 @@
         <a href='<%= @users[user_id].profile_url %>' target='_blank'><%= @users[user_id].nick %></a>
       </div>
       <% @buckets.each do |bucket| %>
-        <div class="cell">
+        <div class="cell answers">
           <%= ranking_elem[bucket][:answers] %>
+          <% totals[bucket] += ranking_elem[bucket][:answers] %>
         </div>
       <% end %>
     </div>
-    <% end %>
+    <% 
+     place += 1
+     end 
+    %>
+
+    <div class="row total" id="row-total">
+      <div class="cell place">
+        
+      </div>
+      <div class="cell">
+        TOTAL
+      </div>
+      <div class="cell">
+        
+      </div>
+      <% @buckets.each do |bucket| %>
+        <div class="cell answers">
+          <%= totals[bucket] %>
+        </div>
+      <% end %>
+    </div>
     
   </div>
+  <script>
+    max_rows = <%= place %>;
+  </script>
 </div>

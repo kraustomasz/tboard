@@ -9,17 +9,16 @@ body {
   color: #3b3b3b;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
-  background: #2b2b2b;
+  background: #fff;
 }
 
 .wrapper {
   margin: 0 auto;
-  padding: 40px;
-  max-width: 800px;
+  padding: 10px 40px 10px 40px;
 }
 
 .table {
-  margin: 0 0 40px 0;
+  margin: 0 0 0px 0;
   width: 100%;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   display: table;
@@ -27,6 +26,12 @@ body {
 @media screen and (max-width: 580px) {
   .table {
     display: block;
+  }
+}
+@media screen and (min-width: 1000px) {
+  body {
+    font-size: 26px;
+    line-height: 40px;
   }
 }
 
@@ -40,12 +45,18 @@ body {
 }
 .row:nth-of-type(2) {
   background: #FFD700;
+  font-size: 160%;
+  line-height: 160%;
 }
 .row:nth-of-type(3) {
   background: #C0C0C0;
+  font-size: 140%;
+  line-height: 140%;
 }
 .row:nth-of-type(4) {
   background: #CD7F32;
+  font-size: 120%;
+  line-height: 120%;
 }
 
 
@@ -54,11 +65,18 @@ body {
   color: #ffffff;
   background: #ea6153;
 }
+.row.header > div {
+  text-align: center;
+}
 .row.green {
   background: #27ae60;
 }
 .row.blue {
   background: #2980b9;
+}
+.row.total {
+  font-weight: bold;
+  background: #ea6153;
 }
 @media screen and (max-width: 580px) {
   .row {
@@ -75,5 +93,48 @@ body {
   .cell {
     padding: 2px 12px;
     display: block;
+  }
+}
+
+.cell.place {
+  text-align: right;
+}
+.cell.answers {
+  text-align: center;
+}
+
+#logo {
+  height: 70px;
+}
+@media screen and (max-width: 580px) {
+  #logo {
+    height: 30px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  #logo {
+    height: 100px;
+    vertical-align: top;
+  }
+}
+
+div.all-header {
+  text-align: center;
+  font-size: 42px;
+  line-height: 70px;
+  vertical-align: top;
+}
+
+@media screen and (min-width: 1000px) {
+  div.all-header {
+    font-size: 60px;
+    line-height: 100px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  div.all-header {
+    font-size: 18px;
+    line-height: 30px;
   }
 }

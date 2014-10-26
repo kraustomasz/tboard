@@ -162,7 +162,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  coffee-rails (~> 4.0.0)
   execjs
   google_drive
   jbuilder (~> 2.0)
