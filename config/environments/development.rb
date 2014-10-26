@@ -34,4 +34,10 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+  config.client_id = "772593203840-n9hcdb8e61q2c51und4ji0pno15k2quj.apps.googleusercontent.com"
+  config.client_secret = "oYLJZCx_Ji3ZBR7QEURH90bi"
+  config.config_spreadsheet_key = "0Agi8dgmkFsa4dEhLV0t6QWZ5c1dDLWljVHZBeVloU0E"
+  config.users_spreadsheet_key = "1LfOmroO89uem18ZC5fzs8nlC61dD7b-Z9bo6lA8S2p4"
+  config.last_check_freshness = 5
+  config.buckets = [7, 30, 90]
 end

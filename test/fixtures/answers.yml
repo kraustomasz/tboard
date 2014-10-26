@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  version: MyString
+  user_id: 1
+  task_id: 1
+  task_created: 2014-10-25 20:18:41
+  created: 2014-10-25 20:18:41
+  points: 1
+  best: false
+
+two:
+  version: MyString
+  user_id: 1
+  task_id: 1
+  task_created: 2014-10-25 20:18:41
+  created: 2014-10-25 20:18:41
+  points: 1
+  best: false

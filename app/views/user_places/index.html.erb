@@ -1,0 +1,36 @@
+<h1>Hello World!</h1>
+<div class="wrapper">-
+  <div class="table">
+    
+    <div class="row header">
+      <div class="cell">
+        Name
+      </div>
+      <div class="cell">
+        Nick
+      </div>
+      <% @buckets.each do |bucket| %>
+	      <div class="cell">
+	        <%= bucket %>d
+	      </div>
+	   <% end %>
+    </div>
+
+    <% @ranking.each do |user_id, ranking_elem| %>
+    <div class="row">
+      <div class="cell">
+       	<%= @users[user_id].name %>
+      </div>
+      <div class="cell">
+        <a href='<%= @users[user_id].profile_url %>' target='_blank'><%= @users[user_id].nick %></a>
+      </div>
+      <% @buckets.each do |bucket| %>
+        <div class="cell">
+          <%= ranking_elem[bucket][:answers] %>
+        </div>
+      <% end %>
+    </div>
+    <% end %>
+    
+  </div>
+</div>

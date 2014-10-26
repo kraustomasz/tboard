@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: 1
+  place: 1
+  user_id: 1
+  answers: 1
+  questions: 1
+  points: 1
+  bests: 1
+
+two:
+  type: 1
+  place: 1
+  user_id: 1
+  answers: 1
+  questions: 1
+  points: 1
+  bests: 1

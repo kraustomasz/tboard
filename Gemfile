@@ -40,4 +40,8 @@ gem 'spring',        group: :development
 
 gem 'execjs'
 gem 'therubyracer'
+gem 'google_drive'
+gem 'retriable'
 
+gem 'nokogiri'
+gem 'restclient'
