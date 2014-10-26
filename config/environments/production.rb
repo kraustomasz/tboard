@@ -75,4 +75,10 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+  config.client_id = "772593203840-n9hcdb8e61q2c51und4ji0pno15k2quj.apps.googleusercontent.com"
+  config.client_secret = "oYLJZCx_Ji3ZBR7QEURH90bi"
+  config.config_spreadsheet_key = "0Agi8dgmkFsa4dFBDdEtSWDdrYzdWd2FtSmFRdm5TLXc"
+  config.users_spreadsheet_key = "1NtfalQwlz4xvcb844BxkRwOVGPRqb82X9GGDCOp199M"
+  config.last_check_freshness = 5
+  config.buckets = [7, 30, 90]
 end
