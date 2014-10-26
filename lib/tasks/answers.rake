@@ -70,7 +70,7 @@ namespace :answers do
 	end
 
 	# iterate next pages
-	max_page = 10
+	max_page = 100
 	cur_page = 2
 	begin
 		cur_task_count = task_ids.count
