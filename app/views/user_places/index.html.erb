@@ -1,6 +1,6 @@
 <div class="wrapper" id="wrapper">
   <div class="all-header">
-    <img src="/logo.png" id='logo' /> answering leaderboard
+    <img src="/logo.png" class='logo' /> answering leaderboard
   </div>
   <div class="table">
     <div class="row header">
@@ -67,3 +67,19 @@
     max_rows = <%= place %>;
   </script>
 </div>
+
+<div id="uservoice-wrapper">
+  <div class="all-header">
+    <img src="/logo.png" class='logo' /> team feedback
+  </div>
+  <iframe id="uservoice" src="https://brainly-team.uservoice.com/forums/271002-general" ></iframe>
+</div>
+
+<div id="news-stream">
+  Message of the Week: Done is better than Perfect
+  <%= params %>
+</div>
+
+<script>
+  is_tv = <%= params.has_key?('tv') ? 'true' : 'false' %>;
+</script>

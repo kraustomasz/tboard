@@ -10,17 +10,20 @@ body {
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
   background: #fff;
+  margin: 0;
+  padding: 0;
 }
 
 .wrapper {
   margin: 0 auto;
-  padding: 10px 40px 10px 40px;
+  padding: 10px 2%;
+  box-sizing: border-box;
 }
 
 .table {
-  margin: 0 0 0px 0;
+  margin: 90px 0 0px 0;
   width: 100%;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  /*box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);*/
   display: table;
 }
 @media screen and (max-width: 580px) {
@@ -28,7 +31,7 @@ body {
     display: block;
   }
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1500px) {
   body {
     font-size: 26px;
     line-height: 40px;
@@ -103,16 +106,16 @@ body {
   text-align: center;
 }
 
-#logo {
+.logo {
   height: 70px;
 }
 @media screen and (max-width: 580px) {
-  #logo {
+  .logo {
     height: 30px;
   }
 }
-@media screen and (min-width: 1000px) {
-  #logo {
+@media screen and (min-width: 1500px) {
+  .logo {
     height: 100px;
     vertical-align: top;
   }
@@ -125,7 +128,7 @@ div.all-header {
   vertical-align: top;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1500px) {
   div.all-header {
     font-size: 60px;
     line-height: 100px;
@@ -138,3 +141,66 @@ div.all-header {
     line-height: 30px;
   }
 }
+
+div.wrapper div.all-header {
+  position: fixed;
+  background: white;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+@media screen and (min-width: 1500px) {
+  div.wrapper div.all-header {
+    width: 70%;
+  }
+  .table {
+    margin-top: 100px;
+  }
+}
+
+
+#uservoice {
+  width: 100%;
+  min-height: 500px;
+  border: none;
+  box-sizing: border-box;
+}
+
+#uservoice-wrapper {
+  box-sizing: border-box;
+  padding: 10px 2%;
+}
+
+@media screen and (min-width: 1500px) {
+  #uservoice-wrapper {
+    width: 30%;
+    float: right;
+    padding-left: 1%;
+    padding-top: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+  }
+  #uservoice-wrapper .logo {
+    display: none;
+  }
+  #uservoice {
+    height: 100%;
+  }
+  .wrapper {
+    width: 70%;
+    float: left;
+    padding-right: 1%;
+    padding-top: 0;
+  }
+}
+
+div#news-stream {
+  bottom: 0px;
+  position: fixed;
+  width: 100%;
+  background: white;
+  text-align: center;
+}
+
