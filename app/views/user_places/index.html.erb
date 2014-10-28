@@ -74,12 +74,14 @@
   </div>
   <iframe id="uservoice" src="https://brainly-team.uservoice.com/forums/271002-general" ></iframe>
 </div>
-
-<div id="news-stream">
-  Message of the Week: Done is better than Perfect
-  <%= params %>
-</div>
-
+<% is_tv = params.has_key?('tv') %>
 <script>
-  is_tv = <%= params.has_key?('tv') ? 'true' : 'false' %>;
+  is_tv = <%= is_tv ? 'true' : 'false' %>;
 </script>
+
+<% if (is_tv) then %>
+  <div id="news-stream">
+    Did you know that?... URL of this website is: http://leaderboard.brainly.com/
+  </div>
+<% end %>
+
